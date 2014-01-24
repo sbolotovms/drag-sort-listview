@@ -640,7 +640,7 @@ public class DragSortListView extends ListView {
         }
     }
 
-    private class AdapterWrapper implements WrapperListAdapter {
+    private class AdapterWrapper extends BaseAdapter implements WrapperListAdapter {
     	private ListAdapter mAdapter;
 
         public AdapterWrapper(ListAdapter adapter) {
