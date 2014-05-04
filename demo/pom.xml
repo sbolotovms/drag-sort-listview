@@ -15,7 +15,7 @@ Copyright 2012 Andreas Schildbach
    limitations under the License.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>com.mobeta.android.dslv</groupId>
@@ -24,42 +24,38 @@ Copyright 2012 Andreas Schildbach
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-	<groupId>com.mobeta.android.demodslv</groupId>
-	<artifactId>drag-sort-listview-demo</artifactId>
-	<packaging>apk</packaging>
-	<version>0.6.2-SNAPSHOT</version>
+    <groupId>com.mobeta.android.demodslv</groupId>
+    <artifactId>drag-sort-listview-demo</artifactId>
+    <packaging>apk</packaging>
+    <version>0.6.2-SNAPSHOT</version>
 
-	<dependencies>
+    <dependencies>
         <dependency>
             <groupId>com.mobeta.android.dslv</groupId>
             <artifactId>drag-sort-listview</artifactId>
-			<version>${project.version}</version>
+            <version>${project.version}</version>
             <type>apklib</type>
-		</dependency>
-		<dependency>
-			<groupId>com.google.android</groupId>
-			<artifactId>android</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.google.android</groupId>
-			<artifactId>support-v4</artifactId>
-		</dependency>
-	</dependencies>
+        </dependency>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>support-v4</artifactId>
+        </dependency>
+    </dependencies>
 
-	<build>
-		<sourceDirectory>src</sourceDirectory>
-		<testSourceDirectory>test</testSourceDirectory>
+    <build>
+        <sourceDirectory>src</sourceDirectory>
+        <testSourceDirectory>test</testSourceDirectory>
 
-		<plugins>
-			<plugin>
-				<groupId>com.jayway.maven.plugins.android.generation2</groupId>
-				<artifactId>android-maven-plugin</artifactId>
-			</plugin>
+        <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-eclipse-plugin</artifactId>
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <artifactId>android-maven-plugin</artifactId>
             </plugin>
-		</plugins>
-	</build>
+        </plugins>
+    </build>
 </project>

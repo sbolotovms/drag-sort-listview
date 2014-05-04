@@ -15,16 +15,18 @@ Copyright 2012 Andreas Schildbach
    limitations under the License.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.mobeta.android.dslv</groupId>
-	<artifactId>parent</artifactId>
-	<version>0.6.2-SNAPSHOT</version>
-	<packaging>pom</packaging>
+    <groupId>com.mobeta.android.dslv</groupId>
+    <artifactId>parent</artifactId>
+    <version>0.6.2-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <android.version>2.1_r1</android.version>
+
+        <java.version>1.6</java.version>
+        <android.version>4.1.1.4</android.version>
         <android.support-v4.version>r7</android.support-v4.version>
     </properties>
 
@@ -34,9 +36,9 @@ Copyright 2012 Andreas Schildbach
     </modules>
 
     <scm>
-        <url>https://github.com/bauerca/drag-sort-listview/</url>
-        <connection>scm:git:git://github.com/bauerca/drag-sort-listview.git</connection>
-        <developerConnection>scm:git:git@github.com:bauerca/drag-sort-listview.git</developerConnection>
+        <url>https://github.com/JayH5/drag-sort-listview/</url>
+        <connection>scm:git:git://github.com/JayH5/drag-sort-listview.git</connection>
+        <developerConnection>scm:git:git@github.com:JayH5/drag-sort-listview.git</developerConnection>
     </scm>
 
     <dependencyManagement>
@@ -46,6 +48,7 @@ Copyright 2012 Andreas Schildbach
                 <artifactId>android</artifactId>
                 <version>${android.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>com.google.android</groupId>
                 <artifactId>support-v4</artifactId>
@@ -59,26 +62,37 @@ Copyright 2012 Andreas Schildbach
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.2.2</version>
+                <version>2.5</version>
                 <configuration>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                 </configuration>
             </plugin>
         </plugins>
-		<pluginManagement>
-			<plugins>
-			    <plugin>
-			    	<groupId>com.jayway.maven.plugins.android.generation2</groupId>
-			    	<artifactId>android-maven-plugin</artifactId>
-			    	<version>3.3.2</version>
-			    	<extensions>true</extensions>
-			    </plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-eclipse-plugin</artifactId>
-					<version>2.9</version>
-				</plugin>
-			</plugins>
-		</pluginManagement>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.1</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <artifactId>android-maven-plugin</artifactId>
+                    <version>3.8.2</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <sdk>
+                            <platform>19</platform>
+                        </sdk>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 </project>
