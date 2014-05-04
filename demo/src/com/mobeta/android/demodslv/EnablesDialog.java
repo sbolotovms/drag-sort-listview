@@ -23,6 +23,10 @@ public class EnablesDialog extends DialogFragment {
         return frag;
     }
 
+    public EnablesDialog() {
+        super();
+    }
+
     public interface EnabledOkListener {
         void onEnabledOkClick(boolean drag, boolean sort, boolean remove);
     }
@@ -62,7 +66,7 @@ public class EnablesDialog extends DialogFragment {
                     public void onClick(DialogInterface dialog, int id) {
                     }
                 });
-    
+
         return builder.create();
     }
 }

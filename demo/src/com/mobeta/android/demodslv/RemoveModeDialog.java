@@ -28,6 +28,10 @@ public class RemoveModeDialog extends DialogFragment {
         return frag;
     }
 
+    public RemoveModeDialog() {
+        super();
+    }
+
     public interface RemoveOkListener {
         void onRemoveOkClick(int removeMode);
     }
@@ -64,7 +68,7 @@ public class RemoveModeDialog extends DialogFragment {
                     public void onClick(DialogInterface dialog, int id) {
                     }
                 });
-    
+
         return builder.create();
     }
 }

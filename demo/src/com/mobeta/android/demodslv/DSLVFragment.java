@@ -61,6 +61,10 @@ public class DSLVFragment extends ListFragment {
         return f;
     }
 
+    public DSLVFragment() {
+        super();
+    }
+
     protected int getLayout() {
         // this DSLV xml declaration does not call for the use
         // of the default DragSortController; therefore,
@@ -133,7 +137,7 @@ public class DSLVFragment extends ListFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        mDslv = (DragSortListView) getListView(); 
+        mDslv = (DragSortListView) getListView();
 
         mDslv.setDropListener(mDropListener);
         mDslv.setRemoveListener(mRemoveListener);

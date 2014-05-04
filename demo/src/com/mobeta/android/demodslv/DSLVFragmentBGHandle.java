@@ -15,6 +15,10 @@ import java.util.List;
 
 public class DSLVFragmentBGHandle extends DSLVFragment {
 
+    public DSLVFragmentBGHandle() {
+        super();
+    }
+
     @Override
     public int getItemLayout() {
         return R.layout.list_item_bg_handle;
@@ -34,7 +38,7 @@ public class DSLVFragmentBGHandle extends DSLVFragment {
 
 
     private class MyAdapter extends ArrayAdapter<String> {
-      
+
         public MyAdapter(List<String> artists) {
             super(getActivity(), getItemLayout(), R.id.text, artists);
         }

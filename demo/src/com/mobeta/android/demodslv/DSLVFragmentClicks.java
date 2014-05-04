@@ -19,6 +19,10 @@ public class DSLVFragmentClicks extends DSLVFragment {
         return f;
     }
 
+    public DSLVFragmentClicks() {
+        super();
+    }
+
     @Override
     public void onActivityCreated(Bundle savedState) {
         super.onActivityCreated(savedState);
@@ -30,7 +34,7 @@ public class DSLVFragmentClicks extends DSLVFragment {
                     long arg3) {
                 String message = String.format("Clicked item %d", arg2);
                 Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
-                
+
             }
         });
         lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
