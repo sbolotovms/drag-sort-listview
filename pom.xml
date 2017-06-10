@@ -36,9 +36,9 @@ Copyright 2012 Andreas Schildbach
     </modules>
 
     <scm>
-        <url>https://github.com/JayH5/drag-sort-listview/</url>
-        <connection>scm:git:git://github.com/JayH5/drag-sort-listview.git</connection>
-        <developerConnection>scm:git:git@github.com:JayH5/drag-sort-listview.git</developerConnection>
+        <url>https://github.com/sbolotovms/drag-sort-listview/</url>
+        <connection>scm:git:git://github.com/sbolotovms/drag-sort-listview.git</connection>
+        <developerConnection>scm:git:git@github.com:sbolotovms/drag-sort-listview.git</developerConnection>
     </scm>
 
     <dependencyManagement>
